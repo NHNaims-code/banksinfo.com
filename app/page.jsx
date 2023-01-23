@@ -14,8 +14,9 @@ export default function Home() {
       <article className="d-lg-flex align-content-center bi-section-space">
           <figure className='d-flex justify-content-center'>
             <Image 
-              src={BankInfoImage1}
-              alt="Bank Info Images" 
+              src={BankInfoImage1.img}
+              alt={BankInfoImage1.alt}
+              title={BankInfoImage1.title}
               height={300}
               width={300}  
               className="bi-content-padding"       
@@ -56,7 +57,9 @@ export default function Home() {
           </div>
           <div className="col-lg-6 position-relative">
             <Image 
-              src={RoutingNumberAnalysisForBetterUnderstanding}
+              src={RoutingNumberAnalysisForBetterUnderstanding.img}
+              alt={RoutingNumberAnalysisForBetterUnderstanding.alt}
+              title={RoutingNumberAnalysisForBetterUnderstanding.title}
               width="100%" 
               height="100%" 
               layout="responsive" 
