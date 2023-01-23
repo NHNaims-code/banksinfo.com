@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="container">
+    <main className="container px-4 lg-px-0">
       <article className="d-lg-flex align-content-center bi-section-space">
-          <figure>
+          <figure className='d-flex justify-content-center'>
             <Image 
               src={BankInfoImage1}
               alt="Bank Info Images" 
@@ -22,7 +22,7 @@ export default function Home() {
             />
           </figure>
 
-          <div className="bi-content-padding">
+          <div className="p-lg-3">
             <HeadingTwo>Welcome to Banks Info</HeadingTwo>
             <p>
               <span className='bi-paragraph'> 
