@@ -1,91 +1,106 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
+import { BankInfoImage1, RoutingNumberAnalysisForBetterUnderstanding, SwiftCode } from '@/assets/images'
+import Link from 'next/link'
+import { DOMAIN } from '@/constant/variable'
+import { HeadingTwo } from '@/components/headings'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.jsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    <main className="container">
+      <article className="d-flex align-content-center bi-section-space">
+          <figure>
+            <Image 
+              src={BankInfoImage1}
+              alt="Bank Info Images" 
+              height={300}
+              width={300}  
+              className="bi-content-padding"       
             />
-          </a>
+          </figure>
+
+          <div className="bi-content-padding">
+            <HeadingTwo>Welcome to Banks Info</HeadingTwo>
+            <p>
+              <span className='bi-paragraph'> 
+              <Link href={`${DOMAIN}`}>Banks Info</Link> is the best 
+              <Link href={`${DOMAIN}/blog/`} >website</Link> to Lookup your 
+              <Link href={`${DOMAIN}/blog/bank-info/`}> bank information</Link> including 
+              <Link href={`${DOMAIN}/routing-number-lookup/`}> Routing Number</Link>, 
+              <Link href={`${DOMAIN}/swift-code-lookup/`}> SWIFT code</Link> or BIC Code, Branch Code, Bank location/Address, 
+              <Link href={`${DOMAIN}/holiday/`}> Bank Holiday</Link>, 
+              <Link href={`${DOMAIN}/blog/reviews/`}> USA Bank Reviews</Link>, 
+              <Link href={`${DOMAIN}/blog/insurance/`}> insurance</Link> and 
+              <Link href={`${DOMAIN}/blog/business-news/`}> Business News</Link> of all USA Bank. Because we have tried to collect the correct information and write in details on that following topic.
+              </span>
+            </p>
+          </div>
+      </article>
+
+      <article className='bi-section-space'>
+        <div className="row">
+          <div className="col-6 bi-content-padding">
+            <HeadingTwo>Bank Routing Number Information</HeadingTwo>
+            <p>
+              <span>
+                A routing number is a nine-digit code which is used to identify a bank institution where your 
+                <Link href="https://banksinfo.us/definition/bank-account-number/"> bank account </Link> 
+                was opened. It is also known as an RTN, an ABA routing number, or a routing transit number. Banks use routing numbers to direct the exchange of funds to and from one another. It is used to send money internationally. 
+                <Link href="https://banksinfo.us/routing-number/"> Learn more about Routing Number </Link>
+                <br/>
+              </span>
+            </p>
+          </div>
+          <div className="col-6 position-relative">
+            <Image 
+              src={RoutingNumberAnalysisForBetterUnderstanding}
+              width="100%" 
+              height="100%" 
+              layout="responsive" 
+              objectFit="contain"
+            />
+          </div>
         </div>
-      </div>
+      </article>
+      <article className='bi-section-space'>
+        <div className="row">
+          <div className="col-6 position-relative">
+            <Image 
+              src={SwiftCode.img}
+              alt={SwiftCode.alt}
+              title={SwiftCode.title}
+              width="100%" 
+              height="100%" 
+              layout="responsive" 
+              objectFit="contain"
+            />
+          </div>
+          <div className="col-6 bi-content-padding">
+            <HeadingTwo>Banks Swift Code Information</HeadingTwo>
+            <p>
+              <span>
+                A SWIFT code is an international bank code that identifies particular banks worldwide. It’s also known as a Bank Identifier Code (BIC). Bank uses SWIFT codes to send money to overseas banks. 
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+                A SWIFT code consists of 8 or 11 characters. 
+                <em> Learn more about </em> – 
+                <a href="https://banksinfo.us/swift-code/what-is-swift-code/"> SWIFT Code</a> and <a href="https://banksinfo.us/swift-code/use-of-swift-code-of-a-bank/"> USE of SWIFT Code </a>.
+              </span>
+             
+            </p>
+            <div className="">
+              <HeadingTwo>BIC Code Info of all Bank</HeadingTwo>
+              <p>
+                <span>
+                  The elaboration form of <strong>BIC Code</strong> is <strong>Bank Identifier Code</strong>. BIC Code is the SWIFT Address assigned to a bank in order to send automated payments quickly and accurately to the banks concerned. For this, BIC Code is also known as <a href="https://banksinfo.us/swift-code/analysis-of-swift-code/">SWIFT Code</a>. It uniquely identifies the Bank’s name or financial Institution’s name, country, (and sometimes the branch) and head office location of the bank. <a href="https://banksinfo.us/definition/what-is-bic-code-of-a-bank/">BIC Code</a> can be either 8 or 11 characters code.</span>
+              
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </article>
     </main>
   )
 }
