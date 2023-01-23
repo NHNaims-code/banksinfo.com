@@ -27,7 +27,7 @@ body {
 
 
 a {
-  color: inherit;
+  color: var(--bi-global-color-0) !important;
   text-decoration: none !important;
 }
 
@@ -43,6 +43,10 @@ a:hover{
 .bi-heading-2{
   font-size: 16pt;
   color: var(--bi-global-color-2);
+}
+.bi-heading-3{
+  font-size: 14pt !important;
+  color: var(--bi-global-color-3);
 }
 
 p{
@@ -117,6 +121,26 @@ p{
   margin-top: 40px;
 }
 
+
+footer h2{
+  color: #DDDDDD !important;
+  font-size: 14pt;
+  margin-bottom: 21px;
+}
+
+footer ul{
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li{
+  padding-top: 10px;
+  color: white;
+}
+
+footer ul li a{
+  color: #DDDDDD !important;
+}
 @media (min-width: 1200px){
 
   .container, .container-lg, .container-md, .container-sm, .container-xl {

@@ -1,16 +1,18 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
-import { BankInfoImage1, RoutingNumberAnalysisForBetterUnderstanding, SwiftCode } from '@/assets/images'
+import { BankHoliday, BankInfoImage1, RoutingNumberAnalysisForBetterUnderstanding, SwiftCode } from '@/assets/images'
 import Link from 'next/link'
 import { DOMAIN } from '@/constant/variable'
-import { HeadingTwo } from '@/components/headings'
+import { HeadingThree, HeadingTwo } from '@/components/headings'
+import ResponsiveImage from '@/components/images/ResponsiveImage'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main className="container px-4 lg-px-0">
+      {/* Article 1 */}
       <article className="d-lg-flex align-content-center bi-section-space">
           <figure className='d-flex justify-content-center'>
             <Image 
@@ -40,7 +42,7 @@ export default function Home() {
             </p>
           </div>
       </article>
-
+      {/* Article 2 */}
       <article className='bi-section-space'>
         <div className="row">
           <div className="col-lg-6 bi-content-padding">
@@ -56,30 +58,16 @@ export default function Home() {
             </p>
           </div>
           <div className="col-lg-6 position-relative">
-            <Image 
-              src={RoutingNumberAnalysisForBetterUnderstanding.img}
-              alt={RoutingNumberAnalysisForBetterUnderstanding.alt}
-              title={RoutingNumberAnalysisForBetterUnderstanding.title}
-              width="100%" 
-              height="100%" 
-              layout="responsive" 
-              objectFit="contain"
-            />
+            <ResponsiveImage imgObj={RoutingNumberAnalysisForBetterUnderstanding}/>
           </div>
         </div>
       </article>
+
+      {/* Article 3 */}
       <article className='bi-section-space'>
         <div className="row">
           <div className="col-lg-6 position-relative">
-            <Image 
-              src={SwiftCode.img}
-              alt={SwiftCode.alt}
-              title={SwiftCode.title}
-              width="100%" 
-              height="100%" 
-              layout="responsive" 
-              objectFit="contain"
-            />
+            <ResponsiveImage imgObj={SwiftCode} />
           </div>
           <div className="col-lg-6 bi-content-padding">
             <HeadingTwo>Banks Swift Code Information</HeadingTwo>
@@ -96,12 +84,56 @@ export default function Home() {
             <div className="">
               <HeadingTwo>BIC Code Info of all Bank</HeadingTwo>
               <p>
-                <span>
-                  The elaboration form of <strong>BIC Code</strong> is <strong>Bank Identifier Code</strong>. BIC Code is the SWIFT Address assigned to a bank in order to send automated payments quickly and accurately to the banks concerned. For this, BIC Code is also known as <a href="https://banksinfo.us/swift-code/analysis-of-swift-code/">SWIFT Code</a>. It uniquely identifies the Bank’s name or financial Institution’s name, country, (and sometimes the branch) and head office location of the bank. <a href="https://banksinfo.us/definition/what-is-bic-code-of-a-bank/">BIC Code</a> can be either 8 or 11 characters code.</span>
-              
+                <span>The elaboration form of <strong>BIC Code</strong> is <strong>Bank Identifier Code</strong>. BIC Code is the SWIFT Address assigned to a bank in order to send automated payments quickly and accurately to the banks concerned. For this, BIC Code is also known as <a href="https://banksinfo.us/swift-code/analysis-of-swift-code/">SWIFT Code</a>. It uniquely identifies the Bank’s name or financial Institution’s name, country, (and sometimes the branch) and head office location of the bank. <a href="https://banksinfo.us/definition/what-is-bic-code-of-a-bank/">BIC Code</a> can be either 8 or 11 characters code.</span>              
               </p>
+              <Link href="">
+                <span style={{fontSize: '14pt'}}>
+                  <strong>
+                  BIC / SWIFT Code Lookup Here
+                  </strong>
+                </span>
+              </Link>
             </div>
           </div>
+        </div>
+      </article>
+
+      {/* Article 4 */}
+      <article>
+        <div className="row">
+          <div className="col-lg-6">
+            <HeadingTwo>Bank Holidays Information</HeadingTwo>
+            <p>
+              Here you will get <a href="https://banksinfo.us/holiday/">National Holidays, Bank Holidays and Business Holidays Information</a>. The following is the Standard Bank Holidays of USA Schedule Which is provided by the Federal Reserve Bank System. Here you will get the Region of Holiday and Date of Holiday. Please click on the “Region of Bank Holiday” to know the details about the holiday as – Region of the holiday, event and incident, Importance of the day etc.
+            </p>
+            <div className="">
+            <HeadingThree>Here are some Popular Bank holiday Schedule.</HeadingThree>
+            <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td className='p-3'><Link href="https://banksinfo.us/blog/holidays/national-holidays-in-usa/">National Holidays, USA</Link></td>
+                <td className='p-3'><Link href="https://banksinfo.us/blog/bank-holidays/us-bank-holidays/">US Bank Holidays</Link></td>
+              </tr>
+              <tr>
+                <td className='p-3'><Link href="https://banksinfo.us/holiday/national/national-holiday-calendar-2020/">National Holiday Calendar</Link></td>
+                <td className='p-3'><Link href="https://banksinfo.us/blog/bank-holidays/federal-reserve-system-holidays/">Federal bank holidays</Link></td>
+              </tr>
+              <tr>
+                <td className='p-3'><Link href="https://banksinfo.us/blog/bank-holidays/bank-of-america-holidays/">Bank Of America Holidays</Link></td>
+                <td className='p-3'><Link href="https://banksinfo.us/blog/bank-holidays/chase-bank-holidays/">Chase Bank Holidays</Link></td>
+              </tr>
+              <tr>
+                <td className='p-3'><Link href="https://banksinfo.us/blog/bank-holidays/wells-fargo-holidays/">Wells Fargo Holidays</Link></td>
+                <td className='p-3'><Link href="https://banksinfo.us/blog/category/bank-holidays/">All othre USA Bank Holiday</Link></td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <ResponsiveImage imgObj={BankHoliday}/>
+          </div>
+
         </div>
       </article>
     </main>

@@ -2,6 +2,7 @@ import './globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link';
 import { IoSearchOutline } from "react-icons/io5";
+import { HeadingTwo } from '@/components/headings';
 
 export default function RootLayout({ children }) {
 
@@ -76,14 +77,76 @@ export default function RootLayout({ children }) {
         </div>
       </nav>
 
+      <main>
         {children}
+      </main>
+
+      <footer className='bg-gc-1 py-4'>
+        <div className="container">
+          <div className="d-lg-flex justify-content-between">
+            <div className="">
+              <h2>Banks Info</h2>
+              <ul>
+                <li><a href="https://banksinfo.us/">Bank Info</a></li>
+                <li><a href="https://banksinfo.us/category/definition/">Definition</a></li>
+                <li><a href="https://banksinfo.us/category/tips/">Tips and Tricks</a></li>
+                <li><a href="https://banksinfo.us/routing-number-lookup/">Routing Number</a></li>
+                <li><a href="https://banksinfo.us/swift-code-lookup/">Swift Code</a></li>
+                <li>Bank Accounts</li>
+              </ul>
+            </div>
+            <div className="mt-5 mt-lg-0">
+              <h2>Banks Info Blog</h2>
+              <ul>
+                <li><a href="https://banksinfo.us/blog/bank-info/">Bank Information</a></li>
+                <li><a href="https://banksinfo.us/blog/reviews/">USA Bank Reviews</a></li>
+                <li><a href="https://banksinfo.us/blog/insurance/">Insurance Info</a></li>
+                <li><a href="https://banksinfo.us/blog/business-news/">Business News</a></li>
+                <li><a href="https://banksinfo.us/blog/bank-holiday/">Bank Holidays</a></li>
+              </ul>
+            </div>
+            <div className="mt-5 mt-lg-0">
+              <h2>US Holidays</h2>
+              <ul>
+                <li><a href="https://banksinfo.us/holiday/bank/" target="_blank" rel="noopener">Bank Holidays</a></li>
+                <li><a href="https://banksinfo.us/holiday/federal/" target="_blank" rel="noopener">Federal Holidays</a></li>
+                <li><a href="https://banksinfo.us/holiday/us-business-holidays/" target="_blank" rel="noopener">Business Holidays</a></li>
+                <li><a href="https://banksinfo.us/holiday/public/" target="_blank" rel="noopener">Public Holidays</a></li>
+                <li><a href="https://banksinfo.us/holiday/national/" target="_blank" rel="noopener">National Holidays</a></li>
+                <li><a href="https://banksinfo.us/holiday/school/" target="_blank" rel="noopener">School Holidays</a></li>
+                <li><a href="https://banksinfo.us/holiday/working-hours/" target="_blank" rel="noopener">Working Hours</a></li>
+              </ul>
+            </div>
+            <div className="mt-5 mt-lg-0">
+              <h2>Write to us</h2>
+              <ul>
+                <li><a href="https://banksinfo.us/blog/submission-terms/">Writing Instruction</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">Business News</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">Your Success Stories</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">Bank Reviews</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">About Insurance</a></li>
+                <li><a href="https://banksinfo.us/blog/my-article/">See Your Article</a></li>
+              </ul>
+            </div>
+            <div className="mt-5 mt-lg-0">
+              <h2><strong>Follow us</strong></h2>
+              <ul>
+                <li><a href="https://banksinfo.us/blog/submission-terms/">Writing Instruction</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">Business News</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">Your Success Stories</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">Bank Reviews</a></li>
+                <li><a href="https://banksinfo.us/blog/submit/">About Insurance</a></li>
+                <li><a href="https://banksinfo.us/blog/my-article/">See Your Article</a></li>
+              </ul>
+            </div>
+      
+          </div>
+        </div>
+      </footer>
 
         {/* Option 1: Bootstrap Bundle with Popper */}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossOrigin="anonymous"></script>
 
-        {/* Adsense Script */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-987************676"
-          crossOrigin="anonymous"></script>
       </body>
     </html>
   )
