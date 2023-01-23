@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main className="container">
-      <article className="d-flex align-content-center bi-section-space">
+      <article className="d-lg-flex align-content-center bi-section-space">
           <figure>
             <Image 
               src={BankInfoImage1}
@@ -42,7 +42,7 @@ export default function Home() {
 
       <article className='bi-section-space'>
         <div className="row">
-          <div className="col-6 bi-content-padding">
+          <div className="col-lg-6 bi-content-padding">
             <HeadingTwo>Bank Routing Number Information</HeadingTwo>
             <p>
               <span>
@@ -54,7 +54,7 @@ export default function Home() {
               </span>
             </p>
           </div>
-          <div className="col-6 position-relative">
+          <div className="col-lg-6 position-relative">
             <Image 
               src={RoutingNumberAnalysisForBetterUnderstanding}
               width="100%" 
@@ -67,7 +67,7 @@ export default function Home() {
       </article>
       <article className='bi-section-space'>
         <div className="row">
-          <div className="col-6 position-relative">
+          <div className="col-lg-6 position-relative">
             <Image 
               src={SwiftCode.img}
               alt={SwiftCode.alt}
@@ -78,7 +78,7 @@ export default function Home() {
               objectFit="contain"
             />
           </div>
-          <div className="col-6 bi-content-padding">
+          <div className="col-lg-6 bi-content-padding">
             <HeadingTwo>Banks Swift Code Information</HeadingTwo>
             <p>
               <span>
