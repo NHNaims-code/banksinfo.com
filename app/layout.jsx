@@ -9,11 +9,11 @@ export default function RootLayout({ children }) {
   const menus = [
     {
       label: "Banks Info",
-      link: "/upcoming"
+      link: "/"
     },
     {
       label: "Routing Number",
-      link: "/upcoming"
+      link: "/routing-number-lookup"
     },
     {
       label: "SWIFT Code",
@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
         {children}
       </main>
 
-      <footer className='bg-gc-1 py-4'>
+      <footer className='bg-gc-1 pt-4'>
         <div className="container">
           <div className="d-lg-flex justify-content-between">
             <div className="">
@@ -142,6 +142,16 @@ export default function RootLayout({ children }) {
       
           </div>
         </div>
+        <div style={{height: '1px', background: '#DDDDDD'}} />
+        <div className="container d-lg-flex justify-content-between my-3">
+          <div className='text-white'>
+            Copyright © 2023 <strong><a className='text-white' href="https://banksinfo.us/" target="_blank">Banks Info</a></strong> । <strong><a className='text-white' href="https://banksinfo.us/blog/" target="_blank"> Blog</a></strong> । <strong><a className='text-white' href="https://banksinfo.us/holiday/" target="_blank"> Holiday Shopping</a></strong>
+          </div>
+          <div className='text-white'>
+              <a href="https://banksinfo.us/about-us/" target="_blank">About us</a> । <a href="https://banksinfo.us/faq/" target="_blank">FAQ</a> । <a href="https://banksinfo.us/privacy-policy/" target="_blank">Privacy Policy</a> । <a href="https://banksinfo.us/terms-and-condition/" target="_blank">T&amp;C</a> । <a href="https://banksinfo.us/blog/complain/" target="_blank">Complain</a> । <a href="https://banksinfo.us/blog/contact/" target="_blank">Contact us</a>
+          </div>
+        </div>
+        <div className="bg-gc-0" style={{height: '27px'}}></div>
       </footer>
 
         {/* Option 1: Bootstrap Bundle with Popper */}

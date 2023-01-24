@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function HeadingTwo({children, ...rest}) {
+export default function HeadingTwo({children, size=14, bold=true, ...rest}) {
   return (
     <h2 {...rest}  className="mb-4">
-        <span className='bi-heading-2'>
-            <strong>
+        <span style={{fontSize: `${size}pt`}}>
+            {bold?<strong>
                 {children}
-            </strong>
+            </strong>: children}
         </span>
     </h2>
   )
